@@ -308,7 +308,7 @@ Resources:
             x=$(( $x + 1 ))
           done
 
-          wget -qO- https://ubuntu.bigbluebutton.org/bbb-install.sh | bash -s -- -c $instance_fqdn:$turnsecret -e ${BBBOperatorEMail}
+          wget -qO- https://github.com/ed8962/bbb-install/blob/master/bbb-installer.sh | bash -s -- -c $instance_fqdn:$turnsecret -e ${BBBOperatorEMail}
 
           curl https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
           chmod +x ./awslogs-agent-setup.py
